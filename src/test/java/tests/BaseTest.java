@@ -1,17 +1,20 @@
 package tests;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import pages.CityPage;
-import pages.MainPage;
+import pages.*;
 
 public class BaseTest {
     MainPage mainPage = new MainPage();
     CityPage cityPage = new CityPage();
+    СinemaPage cinemaPage = new СinemaPage();
+    ConcertsPage concertsPage = new ConcertsPage();
+    TheatersPage theatersPage = new TheatersPage();
 
     @BeforeEach
     void setLogger() {
