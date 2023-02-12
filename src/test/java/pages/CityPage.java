@@ -43,8 +43,8 @@ public class CityPage {
     public SelenideElement getTheaterCardButton() {
         return theaterCardButton;
     }
-
     public SelenideElement getConcertsCard() {
+
         return concertsCard;
     }
 
@@ -139,8 +139,4 @@ public class CityPage {
         сardButton.click();
         return this;
     }
-
-
-
-
 }
