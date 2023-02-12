@@ -23,8 +23,6 @@ public class CityPage {
     protected SelenideElement concertsCardDescription = $(".eb5eVuVwS", 2);
     protected SelenideElement concertsCardPicture = $(".fb5eVuVwS [data-test='image']", 2);
     protected SelenideElement concertsCardButton = $(".gb5eVuVwS", 2);
-
-
     protected SelenideElement theaterCard = $("a[href='/gorod/theatres/']");
     protected SelenideElement theaterCardDescription = $(".eb5eVuVwS", 1);
     protected SelenideElement theaterCardPicture = $(".fb5eVuVwS [data-test='image']", 1);
