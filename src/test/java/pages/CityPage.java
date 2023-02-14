@@ -16,17 +16,17 @@ public class CityPage {
     protected SelenideElement headerAfisha = $("[data-test='htmlTag title']", 1);
     protected SelenideElement descriptionAfisha = $("[data-test='htmlTag subtitle']", 1);
     protected SelenideElement cinemaCard = $("a[href='/gorod/cinema/']");
-    protected SelenideElement cinemaCardButton = $(".gb5eVuVwS", 0);
-    protected SelenideElement cinemaCardDescription = $(".eb5eVuVwS", 0);
-    protected SelenideElement cinemaCardPicture = $(".fb5eVuVwS [data-test='image']", 0);
+    protected SelenideElement cinemaCardButton = $("[data-test='htmlTag slides_button']", 0);
+    protected SelenideElement cinemaCardDescription = $("[data-test='htmlTag slides_subtitle']", 0);
+    protected SelenideElement cinemaCardPicture = $("[data-test='image']", 1);
     protected SelenideElement concertsCard = $("a[href='/gorod/concerts/']");
-    protected SelenideElement concertsCardDescription = $(".eb5eVuVwS", 2);
-    protected SelenideElement concertsCardPicture = $(".fb5eVuVwS [data-test='image']", 2);
-    protected SelenideElement concertsCardButton = $(".gb5eVuVwS", 2);
+    protected SelenideElement concertsCardDescription = $("[data-test='htmlTag slides_subtitle']", 2);
+    protected SelenideElement concertsCardPicture = $("[data-test='image']", 3);
+    protected SelenideElement concertsCardButton = $("[data-test='htmlTag slides_button']", 2);
     protected SelenideElement theaterCard = $("a[href='/gorod/theatres/']");
-    protected SelenideElement theaterCardDescription = $(".eb5eVuVwS", 1);
-    protected SelenideElement theaterCardPicture = $(".fb5eVuVwS [data-test='image']", 1);
-    protected SelenideElement theaterCardButton = $(".gb5eVuVwS", 1);
+    protected SelenideElement theaterCardDescription = $("[data-test='htmlTag slides_subtitle']", 1);
+    protected SelenideElement theaterCardPicture = $("[data-test='image']", 2);
+    protected SelenideElement theaterCardButton = $("[data-test='htmlTag slides_button']", 1);
 
     public SelenideElement getTheaterCard() {
         return theaterCard;
