@@ -20,13 +20,10 @@ public class CityTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("Переход с главной страницы в раздел 'Город' при помощи кнопки в хедере. Проверка наличия элементов на странице")
-    public void goToCitySectionTest(){
-        step("Открытие главной страницы Тинькофф Банка", () -> {
-            mainPage.openMainPage();
-        });
-        step("Клик по кнопке 'Город' в меню футера страницы", () ->{
-            mainPage.clickCityButton();
+    @DisplayName("Открытие страницы 'Тинькофф Город'. Проверка наличия элементов на странице")
+    public void openCity(){
+        step("Открытие страницы 'Тинькофф город'", () ->{
+            cityPage.openCityPage();
         });
         step("На странице отображается заголовок 'Тинькофф Город'", () ->{
             cityPage.headerShouldHaveText("Тинькофф Город");
