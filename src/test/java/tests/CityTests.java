@@ -64,7 +64,7 @@ public class CityTests extends BaseTest {
     public void сinemaCardTest(){
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Кино'", () ->{
-            cityPage.cardHaveHeader(cityPage.getCinemaCard(), "Кино");
+            cityPage.cardHaveHeader(cityPage.getCinemaHeader(), "Кино");
         });
         step("В описании к карточке отображается текст 'Посмотреть афишу, выбрать кинотеатр и купить билеты с кэшбэком до 30%'", () ->{
             cityPage.cardHaveDescription(cityPage.getCinemaCardDescription(), "Посмотреть афишу, выбрать кинотеатр и купить билеты с кэшбэком до 30%");
@@ -94,7 +94,7 @@ public class CityTests extends BaseTest {
     public void concertCardTest(){
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Концерты'", () ->{
-            cityPage.cardHaveHeader(cityPage.getConcertsCard() , "Концерты");
+            cityPage.cardHaveHeader(cityPage.getConcertsHeader() , "Концерты");
         });
         step("В описании к карточке отображается текст 'Купить билеты на концерт любимого исполнителя с кэшбэком до 30%'", () ->{
             cityPage.cardHaveDescription(cityPage.getConcertsCardDescription(), "Купить билеты на концерт любимого исполнителя с кэшбэком до 30%");
@@ -124,7 +124,7 @@ public class CityTests extends BaseTest {
     public void theaterCardTest(){
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Театр'", () ->{
-            cityPage.cardHaveHeader(cityPage.getTheaterCard() , "Театр");
+            cityPage.cardHaveHeader(cityPage.getTheaterHeader() , "Театр");
         });
         step("В описании к карточке отображается текст 'Выбрать спектакль по жанру или театру и купить билеты с кэшбэком до 30%'", () ->{
             cityPage.cardHaveDescription(cityPage.getTheaterCardDescription(), "Выбрать спектакль по жанру или театру и купить билеты с кэшбэком до 30%");

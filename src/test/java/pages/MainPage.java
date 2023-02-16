@@ -9,7 +9,7 @@ public class MainPage {
     SelenideElement cityButton = $("a[href='/gorod/']");
 
     public MainPage openMainPage(){
-        open("/");
+        open("https://www.tinkoff.ru/");
         return this;
     }
     public MainPage clickCityButton(){

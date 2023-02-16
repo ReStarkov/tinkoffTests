@@ -24,9 +24,24 @@ public class CityPage {
     protected SelenideElement concertsCardPicture = $("[data-test='image']", 3);
     protected SelenideElement concertsCardButton = $("[data-test='htmlTag slides_button']", 2);
     protected SelenideElement theaterCard = $("a[href='/gorod/theatres/']");
+    protected SelenideElement cinemaHeader = $("[data-test='htmlTag slides_title']", 0);
+    protected SelenideElement theaterHeader = $("[data-test='htmlTag slides_title']", 1);
+    protected SelenideElement concertsHeader = $("[data-test='htmlTag slides_title']", 2);
     protected SelenideElement theaterCardDescription = $("[data-test='htmlTag slides_subtitle']", 1);
     protected SelenideElement theaterCardPicture = $("[data-test='image']", 2);
     protected SelenideElement theaterCardButton = $("[data-test='htmlTag slides_button']", 1);
+
+    public SelenideElement getCinemaHeader() {
+        return cinemaHeader;
+    }
+
+    public SelenideElement getTheaterHeader() {
+        return theaterHeader;
+    }
+
+    public SelenideElement getConcertsHeader() {
+        return concertsHeader;
+    }
 
     public SelenideElement getTheaterCard() {
         return theaterCard;
