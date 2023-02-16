@@ -82,4 +82,22 @@ allure serve build/allure-results
 
 ![This is an image](/images/screens/10.jpg)
 
+![This is an image](/images/screens/5.jpg)
+
+## Интеграция с Atlassian Jira
+
+![This is an image](/images/screens/9.jpg)
+
+## Получение отчетов о прохождении тестов в telegram
+
+![This is an image](/images/screens/1.jpg)
+
+
+
+
+
+
+
+
+
 
