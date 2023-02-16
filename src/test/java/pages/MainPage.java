@@ -2,11 +2,12 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
-    SelenideElement cityButton = $("a[href='/gorod/']");
+    SelenideElement cityButton = $("[href='/gorod/']");
 
     public MainPage openMainPage(){
         open("https://www.tinkoff.ru/");
