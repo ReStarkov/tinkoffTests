@@ -53,9 +53,9 @@ public class CityTests extends BaseTest {
             cityPage.afishaDescriptionShouldHaveText("Следите за мероприятиями в вашем городе и сразу покупайте билеты");
         });
         step("В разделе 'Афиша' отображаются карточки 'Кино', 'Концерты','Театр'", () ->{
-            cityPage.cardHaveHeader(cityPage.getTheaterCard() , "Театр");
-            cityPage.cardHaveHeader(cityPage.getCinemaCard(), "Кино");
-            cityPage.cardHaveHeader(cityPage.getConcertsCard() , "Концерты");
+            cityPage.cardHaveHeader(cityPage.getTheaterHeader(), "Театр");
+            cityPage.cardHaveHeader(cityPage.getCinemaHeader(), "Кино");
+            cityPage.cardHaveHeader(cityPage.getConcertsHeader() , "Концерты");
         });
     }
 
