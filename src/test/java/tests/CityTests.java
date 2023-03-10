@@ -7,8 +7,6 @@ import static io.qameta.allure.Allure.step;
 
 
 public class CityTests extends BaseTest {
-
-
     public void openCityPageGoToAfisha() {
         step("Открытие страницы 'Тинькофф город'", () -> {
             cityPage.openCityPage();
@@ -144,6 +142,4 @@ public class CityTests extends BaseTest {
             });
         });
     }
-
-
 }
