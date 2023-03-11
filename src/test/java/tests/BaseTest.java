@@ -10,7 +10,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import pages.*;
 
 public class BaseTest {
-    MainPage mainPage = new MainPage();
     CityPage cityPage = new CityPage();
     CinemaPage cinemaPage = new CinemaPage();
     ConcertsPage concertsPage = new ConcertsPage();
