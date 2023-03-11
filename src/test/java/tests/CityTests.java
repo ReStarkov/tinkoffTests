@@ -55,7 +55,7 @@ public class CityTests extends BaseTest {
 
     @Test
     @DisplayName("Проверка отображения элементов на карточке 'Кино'. Переход из карточки к разделу бронирования")
-    public void сinemaCardTest() {
+    public void cinemaCardTest() {
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Кино'", () -> {
             cityPage.cardHaveHeader(cityPage.getCinemaHeader(), "Кино");
