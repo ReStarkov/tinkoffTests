@@ -70,7 +70,7 @@ public class CityTests extends BaseTest {
             cityPage.cardButtonHaveHeader(cityPage.getCinemaCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Кино'", () -> {
-            cityPage.сardButtonClick(cityPage.getCinemaCardButton());
+            cityPage.cardButtonClick(cityPage.getCinemaCardButton());
             step("При переходе в раздел 'Кино' на экране отображается заголовок 'Билеты в кино в приложении Тинькофф'", () -> {
                 cinemaPage.checkPageHeader("Билеты в кино в приложении Тинькофф");
             });
@@ -100,7 +100,7 @@ public class CityTests extends BaseTest {
             cityPage.cardButtonHaveHeader(cityPage.getConcertsCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Концерты'", () -> {
-            cityPage.сardButtonClick(cityPage.getConcertsCardButton());
+            cityPage.cardButtonClick(cityPage.getConcertsCardButton());
             step("При переходе в раздел 'Концерты' на экране отображается заголовок 'Билеты на концерты в приложении Тинькофф'", () -> {
                 concertsPage.checkPageHeader("Билеты на концерты в приложении Тинькофф");
             });
@@ -130,7 +130,7 @@ public class CityTests extends BaseTest {
             cityPage.cardButtonHaveHeader(cityPage.getTheaterCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Театр'", () -> {
-            cityPage.сardButtonClick(cityPage.getTheaterCardButton());
+            cityPage.cardButtonClick(cityPage.getTheaterCardButton());
             step("При переходе в раздел 'Театр' на экране отображается заголовок 'Билеты в театр в приложении Тинькофф'", () -> {
                 theatersPage.checkPageHeader("Билеты в театр в приложении Тинькофф");
             });

@@ -136,8 +136,8 @@ public class CityPage {
         return this;
     }
 
-    public CityPage сardButtonClick(SelenideElement сardButton){
-        сardButton.click();
+    public CityPage cardButtonClick(SelenideElement cardButton){
+        cardButton.click();
         return this;
     }
 }
