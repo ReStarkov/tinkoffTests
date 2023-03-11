@@ -5,23 +5,23 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class СinemaPage {
+public class CinemaPage {
 
     SelenideElement cinemaBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
     SelenideElement cinemaPageHeader = $("[data-test='htmlTag title']", 0);
     SelenideElement cinemaPageDescription = $("[data-test='htmlTag subtitle']", 0);
 
-    public СinemaPage checkBreadCrumbs(String expectText){
+    public CinemaPage checkBreadCrumbs(String expectText){
         cinemaBreadCrumbs.shouldHave(Condition.text(expectText));
         return this;
     }
 
-    public СinemaPage checkPageHeader(String expectText){
+    public CinemaPage checkPageHeader(String expectText){
         cinemaPageHeader.shouldHave(Condition.text(expectText));
         return this;
     }
 
-    public СinemaPage checkPageDescription(String expectText){
+    public CinemaPage checkPageDescription(String expectText){
         cinemaPageDescription.shouldHave(Condition.text(expectText));
         return this;
     }

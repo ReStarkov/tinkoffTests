@@ -12,7 +12,7 @@ import pages.*;
 public class BaseTest {
     MainPage mainPage = new MainPage();
     CityPage cityPage = new CityPage();
-    СinemaPage cinemaPage = new СinemaPage();
+    CinemaPage cinemaPage = new CinemaPage();
     ConcertsPage concertsPage = new ConcertsPage();
     TheatersPage theatersPage = new TheatersPage();
 

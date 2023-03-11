@@ -15,15 +15,12 @@ public class CityPage {
     protected SelenideElement contentButtonMore = $("[data-qa-type='uikit/button.content']");
     protected SelenideElement headerAfisha = $("[data-test='htmlTag title']", 1);
     protected SelenideElement descriptionAfisha = $("[data-test='htmlTag subtitle']", 1);
-    protected SelenideElement cinemaCard = $("a[href='/gorod/cinema/']");
     protected SelenideElement cinemaCardButton = $("[data-test='htmlTag slides_button']", 0);
     protected SelenideElement cinemaCardDescription = $("[data-test='htmlTag slides_subtitle']", 0);
     protected SelenideElement cinemaCardPicture = $("[data-test='image']", 1);
-    protected SelenideElement concertsCard = $("a[href='/gorod/concerts/']");
     protected SelenideElement concertsCardDescription = $("[data-test='htmlTag slides_subtitle']", 2);
     protected SelenideElement concertsCardPicture = $("[data-test='image']", 3);
     protected SelenideElement concertsCardButton = $("[data-test='htmlTag slides_button']", 2);
-    protected SelenideElement theaterCard = $("a[href='/gorod/theatres/']");
     protected SelenideElement cinemaHeader = $("[data-test='htmlTag slides_title']", 0);
     protected SelenideElement theaterHeader = $("[data-test='htmlTag slides_title']", 1);
     protected SelenideElement concertsHeader = $("[data-test='htmlTag slides_title']", 2);
@@ -43,10 +40,6 @@ public class CityPage {
         return concertsHeader;
     }
 
-    public SelenideElement getTheaterCard() {
-        return theaterCard;
-    }
-
     public SelenideElement getTheaterCardDescription() {
         return theaterCardDescription;
     }
@@ -57,10 +50,6 @@ public class CityPage {
 
     public SelenideElement getTheaterCardButton() {
         return theaterCardButton;
-    }
-    public SelenideElement getConcertsCard() {
-
-        return concertsCard;
     }
 
     public SelenideElement getConcertsCardPicture() {
@@ -79,9 +68,6 @@ public class CityPage {
         return cinemaCardButton;
     }
 
-    public SelenideElement getCinemaCard() {
-        return cinemaCard;
-    }
     public SelenideElement getCinemaCardDescription() {
         return cinemaCardDescription;
     }

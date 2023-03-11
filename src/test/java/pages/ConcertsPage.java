@@ -7,22 +7,22 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ConcertsPage {
 
-    SelenideElement сoncertBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
-    SelenideElement сoncertPageHeader = $("[data-test='htmlTag title']", 0);
-    SelenideElement сoncertPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    SelenideElement concertBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
+    SelenideElement concertPageHeader = $("[data-test='htmlTag title']", 0);
+    SelenideElement concertPageDescription = $("[data-test='htmlTag subtitle']", 0);
 
     public ConcertsPage checkBreadCrumbs(String expectText){
-        сoncertBreadCrumbs.shouldHave(Condition.text(expectText));
+        concertBreadCrumbs.shouldHave(Condition.text(expectText));
         return this;
     }
 
     public ConcertsPage checkPageHeader(String expectText){
-        сoncertPageHeader.shouldHave(Condition.text(expectText));
+        concertPageHeader.shouldHave(Condition.text(expectText));
         return this;
     }
 
     public ConcertsPage checkPageDescription(String expectText){
-        сoncertPageDescription.shouldHave(Condition.text(expectText));
+        concertPageDescription.shouldHave(Condition.text(expectText));
         return this;
     }
 }
