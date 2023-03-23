@@ -23,7 +23,7 @@ public class BaseTest {
     @BeforeAll
     static void beforeAll() {
         WebDriverProvider.setConfig();;
-        System.setProperty("chromeoptions.args", "--remote-allow-origins=*");
+
     }
     @AfterEach
     void addAttachments() {
