@@ -23,7 +23,6 @@ public class BaseTest {
     @BeforeAll
     static void beforeAll() {
         WebDriverProvider.setConfig();;
-
     }
     @AfterEach
     void addAttachments() {
