@@ -13,7 +13,7 @@ public class BaseTest {
     CityPage cityPage = new CityPage();
     CinemaPage cinemaPage = new CinemaPage();
     ConcertsPage concertsPage = new ConcertsPage();
-    TheatersPage theatersPage = new TheatersPage();
+    static TheatersPage theatersPage = new TheatersPage();
 
     @BeforeEach
     void setLogger() {

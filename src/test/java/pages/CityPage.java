@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class CityPage {
     protected SelenideElement headerText = $("[data-test='htmlTag title']", 0);
     protected SelenideElement descriptionText = $("[data-test='htmlTag subtitle']", 0);
-    protected  SelenideElement buttonMore = $("[data-qa-type='uikit/button']");
+    protected SelenideElement buttonMore = $("[data-qa-type='uikit/button']");
     protected SelenideElement contentButtonMore = $("[data-qa-type='uikit/button.content']");
     protected SelenideElement headerAfisha = $("[data-test='htmlTag title']", 1);
     protected SelenideElement descriptionAfisha = $("[data-test='htmlTag subtitle']", 1);
@@ -76,67 +76,67 @@ public class CityPage {
         return cinemaCardPicture;
     }
 
-    public CityPage openCityPage(){
+    public CityPage openCityPage() {
         open("/gorod/");
         return this;
     }
 
-    public CityPage headerShouldHaveText(String expectText){
+    public CityPage headerShouldHaveText(String expectText) {
         headerText.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage descriptionShouldHaveText(String expectText){
+    public CityPage descriptionShouldHaveText(String expectText) {
         descriptionText.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage buttonMoreShouldBeVisible(){
+    public CityPage buttonMoreShouldBeVisible() {
         buttonMore.shouldHave(Condition.visible);
         return this;
     }
 
-    public CityPage buttonMoreShouldHaveText(String expectText){
+    public CityPage buttonMoreShouldHaveText(String expectText) {
         contentButtonMore.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage clickMoreButton(){
+    public CityPage clickMoreButton() {
         buttonMore.click();
         return this;
     }
 
-    public CityPage afishaHeaderShouldHaveText(String expectText){
+    public CityPage afishaHeaderShouldHaveText(String expectText) {
         headerAfisha.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage afishaDescriptionShouldHaveText(String expectText){
+    public CityPage afishaDescriptionShouldHaveText(String expectText) {
         descriptionAfisha.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage cardHaveHeader(SelenideElement card, String expectText){
+    public CityPage cardHaveHeader(SelenideElement card, String expectText) {
         card.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage cardHaveDescription(SelenideElement cardDescription, String expectText){
+    public CityPage cardHaveDescription(SelenideElement cardDescription, String expectText) {
         cardDescription.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage cardButtonHaveHeader(SelenideElement cardButton, String expectText){
+    public CityPage cardButtonHaveHeader(SelenideElement cardButton, String expectText) {
         cardButton.shouldHave(text(expectText));
         return this;
     }
 
-    public CityPage cardPictureShouldBeVisable(SelenideElement cardPicture){
+    public CityPage cardPictureShouldBeVisable(SelenideElement cardPicture) {
         cardPicture.shouldBe(visible);
         return this;
     }
 
-    public CityPage cardButtonClick(SelenideElement cardButton){
+    public CityPage cardButtonClick(SelenideElement cardButton) {
         cardButton.click();
         return this;
     }

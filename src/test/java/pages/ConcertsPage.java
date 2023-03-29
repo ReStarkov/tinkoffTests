@@ -11,18 +11,25 @@ public class ConcertsPage {
     SelenideElement concertPageHeader = $("[data-test='htmlTag title']", 0);
     SelenideElement concertPageDescription = $("[data-test='htmlTag subtitle']", 0);
 
-    public ConcertsPage checkBreadCrumbs(String expectText){
-        concertBreadCrumbs.shouldHave(Condition.text(expectText));
+    public SelenideElement getConcertBreadCrumbs() {
+        return concertBreadCrumbs;
+    }
+
+    public SelenideElement getConcertPageHeader() {
+        return concertPageHeader;
+    }
+
+    public SelenideElement getConcertPageDescription() {
+        return concertPageDescription;
+    }
+
+    public ConcertsPage elementShouldBeVisible(SelenideElement element) {
+        element.shouldBe(Condition.visible);
         return this;
     }
 
-    public ConcertsPage checkPageHeader(String expectText){
-        concertPageHeader.shouldHave(Condition.text(expectText));
-        return this;
-    }
-
-    public ConcertsPage checkPageDescription(String expectText){
-        concertPageDescription.shouldHave(Condition.text(expectText));
+    public ConcertsPage elementShouldHaveText(SelenideElement element, String expectText) {
+        element.shouldBe(Condition.have(Condition.text(expectText)));
         return this;
     }
 }

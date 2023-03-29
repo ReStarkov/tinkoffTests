@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 
+
 public class CityTests extends BaseTest {
     public void openCityPageGoToAfisha() {
         step("Открытие страницы 'Тинькофф город'", () -> {
@@ -72,13 +73,13 @@ public class CityTests extends BaseTest {
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Кино'", () -> {
             cityPage.cardButtonClick(cityPage.getCinemaCardButton());
             step("При переходе в раздел 'Кино' на экране отображается заголовок 'Билеты в кино в приложении Тинькофф'", () -> {
-                cinemaPage.checkPageHeader("Билеты в кино в приложении Тинькофф");
+                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaPageHeader(), "Билеты в кино в приложении Тинькофф");
             });
             step("При переходе в раздел 'Кино' на экране отображается подзаголовок 'Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%'", () -> {
-                cinemaPage.checkPageDescription("Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%");
+                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaPageDescription(), "Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Кино'", () -> {
-                cinemaPage.checkBreadCrumbs("Кино");
+                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaBreadCrumbs(), "Кино");
             });
         });
     }
@@ -102,13 +103,13 @@ public class CityTests extends BaseTest {
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Концерты'", () -> {
             cityPage.cardButtonClick(cityPage.getConcertsCardButton());
             step("При переходе в раздел 'Концерты' на экране отображается заголовок 'Билеты на концерты в приложении Тинькофф'", () -> {
-                concertsPage.checkPageHeader("Билеты на концерты в приложении Тинькофф");
+                concertsPage.elementShouldHaveText(concertsPage.getConcertPageHeader(), "Билеты на концерты в приложении Тинькофф");
             });
             step("При переходе в раздел 'Концерты' на экране отображается подзаголовок 'Покупайте билеты на концерты и стендапы с кэшбэком до 30%'", () -> {
-                concertsPage.checkPageDescription("Покупайте билеты на концерты и стендапы с кэшбэком до 30%");
+                concertsPage.elementShouldHaveText(concertsPage.getConcertPageDescription(), "Покупайте билеты на концерты и стендапы с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Концерты'", () -> {
-                concertsPage.checkBreadCrumbs("Концерты");
+                concertsPage.elementShouldHaveText(concertsPage.getConcertBreadCrumbs(), "Концерты");
             });
         });
     }
@@ -132,13 +133,13 @@ public class CityTests extends BaseTest {
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Театр'", () -> {
             cityPage.cardButtonClick(cityPage.getTheaterCardButton());
             step("При переходе в раздел 'Театр' на экране отображается заголовок 'Билеты в театр в приложении Тинькофф'", () -> {
-                theatersPage.checkPageHeader("Билеты в театр в приложении Тинькофф");
+                theatersPage.elementShouldHaveText(theatersPage.getTheaterPageHeader(), "Билеты в театр в приложении Тинькофф");
             });
             step("При переходе в раздел 'Театр' на экране отображается подзаголовок 'Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%'", () -> {
-                theatersPage.checkPageDescription("Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%");
+                theatersPage.elementShouldHaveText(theatersPage.getTheaterPageDescription(),"Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Театры'", () -> {
-                theatersPage.checkBreadCrumbs("Театры");
+                theatersPage.elementShouldHaveText(theatersPage.getTheaterBreadCrumbs(),"Театры");
             });
         });
     }
