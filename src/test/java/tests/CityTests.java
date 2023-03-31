@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 
-
 public class CityTests extends BaseTest {
     public void openCityPageGoToAfisha() {
         step("Открытие страницы 'Тинькофф город'", () -> {
             cityPage.openCityPage();
         });
         step("Нажатие на кнопку 'Узнать больше'", () -> {
-            cityPage.clickMoreButton();
+            cityPage.getButtonMore().click();
         });
     }
 
@@ -24,16 +23,16 @@ public class CityTests extends BaseTest {
             cityPage.openCityPage();
         });
         step("На странице отображается заголовок 'Тинькофф Город'", () -> {
-            cityPage.headerShouldHaveText("Тинькофф Город");
+            elementShouldHaveText(cityPage.getHeaderText(), "Тинькофф Город");
         });
         step("На странице отображается подзаголовок \"Покупайте билеты на мероприятия, бронируйте рестораны и оплачивайте повседневные сервисы —\n" +
                 "прямо в приложении Тинькофф'", () -> {
-            cityPage.descriptionShouldHaveText("Покупайте билеты на мероприятия, бронируйте рестораны и оплачивайте повседневные сервисы —\n" +
+            elementShouldHaveText(cityPage.getDescriptionText(), "Покупайте билеты на мероприятия, бронируйте рестораны и оплачивайте повседневные сервисы —\n" +
                     "прямо в приложении Тинькофф");
         });
         step("На странице отображается кнопка 'Узнать больше'", () -> {
-            cityPage.buttonMoreShouldBeVisible();
-            cityPage.buttonMoreShouldHaveText("Узнать больше");
+            elementShouldBeVisible(cityPage.getButtonMore());
+            elementShouldHaveText(cityPage.getButtonMore(), "Узнать больше");
         });
     }
 
@@ -42,15 +41,15 @@ public class CityTests extends BaseTest {
     public void afishaSectionTest() {
         openCityPageGoToAfisha();
         step("На экране отображается заголовок 'Афиша'", () -> {
-            cityPage.afishaHeaderShouldHaveText("Афиша");
+            elementShouldHaveText(cityPage.getHeaderAfisha(), "Афиша");
         });
         step("На экране отображается подзаголовок 'Следите за мероприятиями в вашем городе и сразу покупайте билеты'", () -> {
-            cityPage.afishaDescriptionShouldHaveText("Следите за мероприятиями в вашем городе и сразу покупайте билеты");
+            elementShouldHaveText(cityPage.getDescriptionAfisha(), "Следите за мероприятиями в вашем городе и сразу покупайте билеты");
         });
         step("В разделе 'Афиша' отображаются карточки 'Кино', 'Концерты','Театр'", () -> {
-            cityPage.cardHaveHeader(cityPage.getTheaterHeader(), "Театр");
-            cityPage.cardHaveHeader(cityPage.getCinemaHeader(), "Кино");
-            cityPage.cardHaveHeader(cityPage.getConcertsHeader(), "Концерты");
+            elementShouldHaveText(cityPage.getTheaterHeader(), "Театр");
+            elementShouldHaveText(cityPage.getCinemaHeader(), "Кино");
+            elementShouldHaveText(cityPage.getConcertsHeader(), "Концерты");
         });
     }
 
@@ -59,27 +58,28 @@ public class CityTests extends BaseTest {
     public void cinemaCardTest() {
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Кино'", () -> {
-            cityPage.cardHaveHeader(cityPage.getCinemaHeader(), "Кино");
+            elementShouldHaveText(cityPage.getCinemaHeader(), "Кино");
         });
         step("В описании к карточке отображается текст 'Посмотреть афишу, выбрать кинотеатр и купить билеты с кэшбэком до 30%'", () -> {
-            cityPage.cardHaveDescription(cityPage.getCinemaCardDescription(), "Посмотреть афишу, выбрать кинотеатр и купить билеты с кэшбэком до 30%");
+            elementShouldHaveText(cityPage.getCinemaCardDescription(), "Посмотреть афишу, выбрать кинотеатр и купить билеты с кэшбэком до 30%");
+
         });
         step("Проверка отображения изображения на карточке 'Кино'", () -> {
-            cityPage.cardPictureShouldBeVisable(cityPage.getCinemaCardPicture());
+            elementShouldBeVisible(cityPage.getCinemaCardPicture());
         });
         step("На карточке 'Кино' присутствует кнопка с текстом 'Подробнее'", () -> {
-            cityPage.cardButtonHaveHeader(cityPage.getCinemaCardButton(), "Подробнее");
+            elementShouldHaveText(cityPage.getCinemaCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Кино'", () -> {
-            cityPage.cardButtonClick(cityPage.getCinemaCardButton());
+            cityPage.getCinemaCardButton().click();
             step("При переходе в раздел 'Кино' на экране отображается заголовок 'Билеты в кино в приложении Тинькофф'", () -> {
-                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaPageHeader(), "Билеты в кино в приложении Тинькофф");
+                elementShouldHaveText(cinemaPage.getCinemaPageHeader(), "Билеты в кино в приложении Тинькофф");
             });
             step("При переходе в раздел 'Кино' на экране отображается подзаголовок 'Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%'", () -> {
-                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaPageDescription(), "Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%");
+                elementShouldHaveText(cinemaPage.getCinemaPageDescription(), "Выбирайте фильм, кинотеатр, сеанс и места — оплачивайте с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Кино'", () -> {
-                cinemaPage.elementShouldHaveText(cinemaPage.getCinemaBreadCrumbs(), "Кино");
+                elementShouldHaveText(cinemaPage.getCinemaBreadCrumbs(), "Кино");
             });
         });
     }
@@ -89,27 +89,28 @@ public class CityTests extends BaseTest {
     public void concertCardTest() {
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Концерты'", () -> {
-            cityPage.cardHaveHeader(cityPage.getConcertsHeader(), "Концерты");
+            elementShouldHaveText(cityPage.getConcertsHeader(), "Концерты");
         });
         step("В описании к карточке отображается текст 'Купить билеты на концерт любимого исполнителя с кэшбэком до 30%'", () -> {
-            cityPage.cardHaveDescription(cityPage.getConcertsCardDescription(), "Купить билеты на концерт любимого исполнителя с кэшбэком до 30%");
+            elementShouldHaveText(cityPage.getConcertsCardDescription(), "Купить билеты на концерт любимого исполнителя с кэшбэком до 30%");
+
         });
         step("Проверка отображения изображения на карточке 'Концерты'", () -> {
-            cityPage.cardPictureShouldBeVisable(cityPage.getConcertsCardPicture());
+            elementShouldBeVisible(cityPage.getConcertsCardPicture());
         });
         step("На карточке 'Концерты' присутствует кнопка с текстом 'Подробнее'", () -> {
-            cityPage.cardButtonHaveHeader(cityPage.getConcertsCardButton(), "Подробнее");
+            elementShouldHaveText(cityPage.getConcertsCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Концерты'", () -> {
-            cityPage.cardButtonClick(cityPage.getConcertsCardButton());
+            cityPage.getConcertsCardButton().click();
             step("При переходе в раздел 'Концерты' на экране отображается заголовок 'Билеты на концерты в приложении Тинькофф'", () -> {
-                concertsPage.elementShouldHaveText(concertsPage.getConcertPageHeader(), "Билеты на концерты в приложении Тинькофф");
+                elementShouldHaveText(concertsPage.getConcertPageHeader(), "Билеты на концерты в приложении Тинькофф");
             });
             step("При переходе в раздел 'Концерты' на экране отображается подзаголовок 'Покупайте билеты на концерты и стендапы с кэшбэком до 30%'", () -> {
-                concertsPage.elementShouldHaveText(concertsPage.getConcertPageDescription(), "Покупайте билеты на концерты и стендапы с кэшбэком до 30%");
+                elementShouldHaveText(concertsPage.getConcertPageDescription(), "Покупайте билеты на концерты и стендапы с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Концерты'", () -> {
-                concertsPage.elementShouldHaveText(concertsPage.getConcertBreadCrumbs(), "Концерты");
+                elementShouldHaveText(concertsPage.getConcertBreadCrumbs(), "Концерты");
             });
         });
     }
@@ -119,27 +120,27 @@ public class CityTests extends BaseTest {
     public void theaterCardTest() {
         openCityPageGoToAfisha();
         step("Проверка заголовка на карточке 'Театр'", () -> {
-            cityPage.cardHaveHeader(cityPage.getTheaterHeader(), "Театр");
+            elementShouldHaveText(cityPage.getTheaterHeader(), "Театр");
         });
         step("В описании к карточке отображается текст 'Выбрать спектакль по жанру или театру и купить билеты с кэшбэком до 30%'", () -> {
-            cityPage.cardHaveDescription(cityPage.getTheaterCardDescription(), "Выбрать спектакль по жанру или театру и купить билеты с кэшбэком до 30%");
+            elementShouldHaveText(cityPage.getTheaterCardDescription(), "Выбрать спектакль по жанру или театру и купить билеты с кэшбэком до 30%");
         });
         step("Проверка отображения изображения на карточке 'Театр'", () -> {
-            cityPage.cardPictureShouldBeVisable(cityPage.getTheaterCardPicture());
+            elementShouldBeVisible(cityPage.getTheaterCardPicture());
         });
         step("На карточке 'Театр' присутствует кнопка с текстом 'Подробнее'", () -> {
-            cityPage.cardButtonHaveHeader(cityPage.getTheaterCardButton(), "Подробнее");
+            elementShouldHaveText(cityPage.getTheaterCardButton(), "Подробнее");
         });
         step("Клик по кнопке с текстом 'Подробнее' на карточке 'Театр'", () -> {
-            cityPage.cardButtonClick(cityPage.getTheaterCardButton());
+            cityPage.getTheaterCardButton().click();
             step("При переходе в раздел 'Театр' на экране отображается заголовок 'Билеты в театр в приложении Тинькофф'", () -> {
-                theatersPage.elementShouldHaveText(theatersPage.getTheaterPageHeader(), "Билеты в театр в приложении Тинькофф");
+                elementShouldHaveText(theatersPage.getTheaterPageHeader(), "Билеты в театр в приложении Тинькофф");
             });
             step("При переходе в раздел 'Театр' на экране отображается подзаголовок 'Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%'", () -> {
-                theatersPage.elementShouldHaveText(theatersPage.getTheaterPageDescription(),"Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%");
+                elementShouldHaveText(theatersPage.getTheaterPageDescription(), "Покупайте билеты на спектакли, мюзиклы и шоу с кэшбэком до 30%");
             });
             step("В навигации сайта указано, что в данные момент находимся в разделе 'Театры'", () -> {
-                theatersPage.elementShouldHaveText(theatersPage.getTheaterBreadCrumbs(),"Театры");
+                elementShouldHaveText(theatersPage.getTheaterBreadCrumbs(), "Театры");
             });
         });
     }

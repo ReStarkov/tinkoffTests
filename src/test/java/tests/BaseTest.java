@@ -1,4 +1,6 @@
 package tests;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import config.WebDriverProvider;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -10,9 +12,9 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import pages.*;
 
 public class BaseTest {
-    CityPage cityPage = new CityPage();
-    CinemaPage cinemaPage = new CinemaPage();
-    ConcertsPage concertsPage = new ConcertsPage();
+    static CityPage cityPage = new CityPage();
+    static CinemaPage cinemaPage = new CinemaPage();
+    static ConcertsPage concertsPage = new ConcertsPage();
     static TheatersPage theatersPage = new TheatersPage();
 
     @BeforeEach
@@ -30,5 +32,14 @@ public class BaseTest {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+    }
+
+    public void elementShouldBeVisible(SelenideElement element) {
+        element.shouldBe(Condition.visible);
+    }
+
+    public void elementShouldHaveText(SelenideElement element, String expectText) {
+        element.shouldBe(Condition.have(Condition.text(expectText)));
+
     }
 }

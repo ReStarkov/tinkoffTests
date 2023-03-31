@@ -1,35 +1,26 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import lombok.Data;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
+@Data
 public class ConcertsPage {
 
-    SelenideElement concertBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
-    SelenideElement concertPageHeader = $("[data-test='htmlTag title']", 0);
-    SelenideElement concertPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    protected SelenideElement concertBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
+    protected SelenideElement concertPageHeader = $("[data-test='htmlTag title']", 0);
+    protected SelenideElement concertPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    protected SelenideElement concertPageButton = $("[data-qa-type='uikit/button']");
+    protected SelenideElement concertPageApplication = $("[role='application']");
+    protected SelenideElement concertPageApplicationQrCode = $("[title='qrCode']");
+    protected SelenideElement concertPageApplicationGoogle = $("[data-test='googlePlayLink']");
+    protected SelenideElement concertPageApplicationAppstore = $("[data-test='appStoreLink']");
+    protected SelenideElement concertPageApplicationAppGallery = $("[data-test='appGalleryLink']");
 
-    public SelenideElement getConcertBreadCrumbs() {
-        return concertBreadCrumbs;
-    }
-
-    public SelenideElement getConcertPageHeader() {
-        return concertPageHeader;
-    }
-
-    public SelenideElement getConcertPageDescription() {
-        return concertPageDescription;
-    }
-
-    public ConcertsPage elementShouldBeVisible(SelenideElement element) {
-        element.shouldBe(Condition.visible);
-        return this;
-    }
-
-    public ConcertsPage elementShouldHaveText(SelenideElement element, String expectText) {
-        element.shouldBe(Condition.have(Condition.text(expectText)));
+    public ConcertsPage openConcertsPage() {
+        open("/gorod/concerts/");
         return this;
     }
 }

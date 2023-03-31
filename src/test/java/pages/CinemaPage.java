@@ -1,50 +1,27 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import lombok.Data;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
+@Data
 public class CinemaPage {
 
-    SelenideElement cinemaBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
-    SelenideElement cinemaPageHeader = $("[data-test='htmlTag title']", 0);
-    SelenideElement cinemaPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    protected SelenideElement cinemaBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
+    protected SelenideElement cinemaPageHeader = $("[data-test='htmlTag title']", 0);
+    protected SelenideElement cinemaPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    protected SelenideElement cinemaPageButton = $("[data-qa-type='uikit/button']");
+    protected SelenideElement cinemaPageApplication = $("[role='application']");
+    protected SelenideElement cinemaPageApplicationQrCode = $("[title='qrCode']");
+    protected SelenideElement cinemaPageApplicationGoogle= $("[data-test='googlePlayLink']");
+    protected SelenideElement cinemaPageApplicationAppstore = $("[data-test='appStoreLink']");
+    protected SelenideElement cinemaPageApplicationAppGallery = $("[data-test='appGalleryLink']");
 
-    public SelenideElement getCinemaBreadCrumbs() {
-        return cinemaBreadCrumbs;
-    }
-
-    public SelenideElement getCinemaPageHeader() {
-        return cinemaPageHeader;
-    }
-
-    public SelenideElement getCinemaPageDescription() {
-        return cinemaPageDescription;
-    }
-
-    public CinemaPage checkBreadCrumbs(String expectText){
-        cinemaBreadCrumbs.shouldHave(Condition.text(expectText));
+    public CinemaPage openCinemaPage() {
+        open("/gorod/cinema/");
         return this;
     }
 
-    public CinemaPage checkPageHeader(String expectText){
-        cinemaPageHeader.shouldHave(Condition.text(expectText));
-        return this;
-    }
-
-    public CinemaPage checkPageDescription(String expectText){
-        cinemaPageDescription.shouldHave(Condition.text(expectText));
-        return this;
-    }
-
-    public CinemaPage elementShouldBeVisible(SelenideElement element) {
-        element.shouldBe(Condition.visible);
-        return this;
-    }
-
-    public CinemaPage elementShouldHaveText(SelenideElement element, String expectText) {
-        element.shouldBe(Condition.have(Condition.text(expectText)));
-        return this;
-    }
 }
