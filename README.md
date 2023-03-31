@@ -47,7 +47,7 @@
 ###  Локальный запуск :
 Пример командной строки:
 ```bash
-gradle clean test
+gradle clean test -Denv=local
 ```
 Получение отчёта:
 ```bash
