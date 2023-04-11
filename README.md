@@ -99,6 +99,15 @@ allure serve build/allure-results
 
 ![This is an image](/images/screens/1.jpg)
 
+## Локальный запуск тестов
+
+![This is an image](/images/screens/local.gif)
+
+## Запуск тестов в selenoid
+
+![This is an image](/images/screens/selenoid.gif)
+
+
 
 
 
