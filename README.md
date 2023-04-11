@@ -104,7 +104,7 @@ allure serve build/allure-results
 
 ## Локальный запуск тестов
 
-![This is an image](/images/screens/local2.gif)
+![This is an image](/images/screens/local.gif)
 
 ## Запуск тестов в selenoid
 
