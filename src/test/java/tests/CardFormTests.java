@@ -31,10 +31,14 @@ public class CardFormTests extends BaseTest{
         });
         step("Нажатие на форму выбора категорий. Выбор 4х категорий в списке", () -> {
             cardForm.getChooseCategory().click();
-            $(byText("5% - Аптеки")).click();
-            $(byText("5% - Ozon.ru")).click();
-            $(byText("3% - Пятёрочка")).click();
-            $(byText("5% - Такси")).click();
+//            $(byText("5% - Аптеки")).click();
+            cardForm.getChoosePharmacy().click();
+//            $(byText("5% - Ozon.ru")).click();
+            cardForm.getChooseOzon().click();
+//            $(byText("3% - Пятёрочка")).click();
+            cardForm.getChooseFive().click();
+//            $(byText("5% - Такси")).click();
+            cardForm.getChooseTaxi().click();
             cardForm.getChooseCategory().click();
         });
         step("Ввод ФИО", () -> {

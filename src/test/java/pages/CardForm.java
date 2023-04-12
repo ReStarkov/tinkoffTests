@@ -14,17 +14,21 @@ public class CardForm {
         return this;
     }
 
-    SelenideElement chooseCategory = $("[data-qa-type='uikit/multiSelect.dropdown']");
-    SelenideElement formHeader = $("[data-qa-type='uikit/sectionTitle']", 0);
-    SelenideElement fioInput = $("[data-qa-type='uikit/inputFio.inputBox.inputContainer']");
-    SelenideElement fioInputText = $("[data-qa-type='uikit/inputFio.value.input']");
-    SelenideElement phoneInput = $("[data-qa-type='uikit/inputPhone.inputBox.inputContainer']");
-    SelenideElement phoneInputText = $("[data-qa-type='uikit/inputPhone.value.input']");
-    SelenideElement emailInput = $("[data-qa-type='uikit/inputAutocomplete.inputBox.inputContainer']");
-    SelenideElement emailInputText = $("[data-qa-type='uikit/inputAutocomplete.value.input']");
-    SelenideElement dateInput = $("[data-qa-type='uikit/input.inputBox uikit/input.inputBox_required']");
-    SelenideElement dateInputText = $("[data-qa-type='uikit/input.value.input']");
+    private SelenideElement chooseCategory = $("[data-qa-type='uikit/multiSelect.dropdown']");
+    private SelenideElement formHeader = $("[data-qa-type='uikit/sectionTitle']", 0);
+    private SelenideElement fioInput = $("[data-qa-type='uikit/inputFio.inputBox.inputContainer']");
+    private SelenideElement fioInputText = $("[data-qa-type='uikit/inputFio.value.input']");
+    private SelenideElement phoneInput = $("[data-qa-type='uikit/inputPhone.inputBox.inputContainer']");
+    private SelenideElement phoneInputText = $("[data-qa-type='uikit/inputPhone.value.input']");
+    private SelenideElement emailInput = $("[data-qa-type='uikit/inputAutocomplete.inputBox.inputContainer']");
+    private SelenideElement emailInputText = $("[data-qa-type='uikit/inputAutocomplete.value.input']");
+    private SelenideElement dateInput = $("[data-qa-type='uikit/input.inputBox uikit/input.inputBox_required']");
+    private SelenideElement dateInputText = $("[data-qa-type='uikit/input.value.input']");
+    private SelenideElement chooseCountry = $("[data-qa-type='uikit/select.wrapper uikit/select.wrapper_required']");
+    private SelenideElement chooseCountryAccept = $(byText("Имею гражданство РФ"));
+    private SelenideElement choosePharmacy = $(byText("5% - Аптеки"));
+    private SelenideElement chooseOzon = $(byText("5% - Ozon.ru"));
+    private SelenideElement chooseFive = $(byText("3% - Пятёрочка"));
+    private SelenideElement chooseTaxi = $(byText("5% - Такси"));
 
-    SelenideElement chooseCountry = $("[data-qa-type='uikit/select.wrapper uikit/select.wrapper_required']");
-    SelenideElement chooseCountryAccept = $(byText("Имею гражданство РФ"));
 }

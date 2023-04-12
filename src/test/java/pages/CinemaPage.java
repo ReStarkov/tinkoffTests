@@ -9,15 +9,15 @@ import static com.codeborne.selenide.Selenide.open;
 @Data
 public class CinemaPage {
 
-    protected SelenideElement cinemaBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
-    protected SelenideElement cinemaPageHeader = $("[data-test='htmlTag title']", 0);
-    protected SelenideElement cinemaPageDescription = $("[data-test='htmlTag subtitle']", 0);
-    protected SelenideElement cinemaPageButton = $("[data-qa-type='uikit/button']");
-    protected SelenideElement cinemaPageApplication = $("[role='application']");
-    protected SelenideElement cinemaPageApplicationQrCode = $("[title='qrCode']");
-    protected SelenideElement cinemaPageApplicationGoogle= $("[data-test='googlePlayLink']");
-    protected SelenideElement cinemaPageApplicationAppstore = $("[data-test='appStoreLink']");
-    protected SelenideElement cinemaPageApplicationAppGallery = $("[data-test='appGalleryLink']");
+    private SelenideElement cinemaBreadCrumbs = $("[data-item-type='breadcrumbs']", 1);
+    private SelenideElement cinemaPageHeader = $("[data-test='htmlTag title']", 0);
+    private SelenideElement cinemaPageDescription = $("[data-test='htmlTag subtitle']", 0);
+    private SelenideElement cinemaPageButton = $("[data-qa-type='uikit/button']");
+    private SelenideElement cinemaPageApplication = $("[role='application']");
+    private SelenideElement cinemaPageApplicationQrCode = $("[title='qrCode']");
+    private SelenideElement cinemaPageApplicationGoogle= $("[data-test='googlePlayLink']");
+    private SelenideElement cinemaPageApplicationAppstore = $("[data-test='appStoreLink']");
+    private SelenideElement cinemaPageApplicationAppGallery = $("[data-test='appGalleryLink']");
 
     public CinemaPage openCinemaPage() {
         open("/gorod/cinema/");
