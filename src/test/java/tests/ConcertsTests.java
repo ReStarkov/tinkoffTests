@@ -24,7 +24,7 @@ public class ConcertsTests extends BaseTest {
         });
         step("На экране отображается кнопка с текстом 'Выбрать концерт''", () -> {
             elementShouldBeVisible(concertsPage.getConcertPageButton());
-            elementShouldHaveText(concertsPage.getConcertPageButton(),"Выбрать концерт");
+            elementShouldHaveText(concertsPage.getConcertPageButton(), "Выбрать концерт");
         });
         step("Нажатие на кнопку с текстом 'Выбрать концерт'", () -> {
             concertsPage.getConcertPageButton().click();
@@ -32,7 +32,7 @@ public class ConcertsTests extends BaseTest {
         step("Произошел переход к блоку мобильного приложения. В блоке отображается надпись 'Выберите мероприятие' ", () -> {
             elementShouldBeVisible(concertsPage.getConcertPageApplication());
             step("В блоке отображается надпись 'Выберите мероприятие", () -> {
-                elementShouldHaveText(concertsPage.getConcertPageApplication(),"Выберите мероприятие");
+                elementShouldHaveText(concertsPage.getConcertPageApplication(), "Выберите мероприятие");
             });
             step("В блоке отображается QR-код", () -> {
                 elementShouldBeVisible(concertsPage.getConcertPageApplicationQrCode());

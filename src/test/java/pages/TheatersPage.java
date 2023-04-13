@@ -14,7 +14,7 @@ public class TheatersPage {
     private SelenideElement theaterPageButton = $("[data-qa-type='uikit/button']");
     private SelenideElement theaterPageApplication = $("[role='application']");
     private SelenideElement theaterPageApplicationQrCode = $("[title='qrCode']");
-    private SelenideElement theaterPageApplicationGoogle= $("[data-test='googlePlayLink']");
+    private SelenideElement theaterPageApplicationGoogle = $("[data-test='googlePlayLink']");
     private SelenideElement theaterPageApplicationAppstore = $("[data-test='appStoreLink']");
     private SelenideElement theaterPageApplicationAppGallery = $("[data-test='appGalleryLink']");
 

@@ -15,7 +15,7 @@ public class CinemaPage {
     private SelenideElement cinemaPageButton = $("[data-qa-type='uikit/button']");
     private SelenideElement cinemaPageApplication = $("[role='application']");
     private SelenideElement cinemaPageApplicationQrCode = $("[title='qrCode']");
-    private SelenideElement cinemaPageApplicationGoogle= $("[data-test='googlePlayLink']");
+    private SelenideElement cinemaPageApplicationGoogle = $("[data-test='googlePlayLink']");
     private SelenideElement cinemaPageApplicationAppstore = $("[data-test='appStoreLink']");
     private SelenideElement cinemaPageApplicationAppGallery = $("[data-test='appGalleryLink']");
 

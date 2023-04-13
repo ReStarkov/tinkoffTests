@@ -4,11 +4,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-public class CardFormTests extends BaseTest{
+public class CardFormTests extends BaseTest {
     @BeforeAll
     public static void openCardForm() {
         step("Открытие страницы оформления карты", () -> {
@@ -58,10 +56,10 @@ public class CardFormTests extends BaseTest{
             cardForm.getChooseCountryAccept().click();
         });
         step("Проверка результата", () -> {
-            elementShouldHaveText(cardForm.getChooseCategory(),"5% - Аптеки, 5% - Ozon.ru, 3% - Пятёрочка, 5% - Такси");
+            elementShouldHaveText(cardForm.getChooseCategory(), "5% - Аптеки, 5% - Ozon.ru, 3% - Пятёрочка, 5% - Такси");
             elementShouldHaveText(cardForm.getFioInput(), fio);
             elementShouldHaveText(cardForm.getPhoneInput(), "+7 (926) 223-93-23");
-            elementShouldHaveText(cardForm.getChooseCountry(),"Имею гражданство РФ");
+            elementShouldHaveText(cardForm.getChooseCountry(), "Имею гражданство РФ");
         });
     }
 }

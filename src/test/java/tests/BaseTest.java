@@ -1,15 +1,14 @@
 package tests;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebDriverProvider;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import com.codeborne.selenide.logevents.SelenideLogger;
-
 import pages.*;
 
 public class BaseTest {
@@ -27,8 +26,9 @@ public class BaseTest {
 
     @BeforeAll
     static void beforeAll() {
-        WebDriverProvider.setConfig();;
+        WebDriverProvider.setConfig();
     }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");

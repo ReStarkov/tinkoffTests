@@ -24,7 +24,7 @@ public class FuelTests extends BaseTest {
         });
         step("На экране отображается кнопка с текстом 'Найти заправку''", () -> {
             elementShouldBeVisible(fuelPage.getFuelPageButton());
-            elementShouldHaveText(fuelPage.getFuelPageButton(),"Найти заправку");
+            elementShouldHaveText(fuelPage.getFuelPageButton(), "Найти заправку");
         });
         step("Нажатие на кнопку с текстом 'Найти заправку'", () -> {
             fuelPage.getFuelPageButton().click();
@@ -32,7 +32,7 @@ public class FuelTests extends BaseTest {
         step("Произошел переход к блоку мобильного приложения. В блоке отображается надпись 'Заправляйте топливо с кэшбэкоме' ", () -> {
             elementShouldBeVisible(fuelPage.getFuelPageApplication());
             step("В блоке отображается надпись 'Выберите мероприятие", () -> {
-                elementShouldHaveText(fuelPage.getFuelPageApplication(),"Заправляйте топливо с кэшбэком");
+                elementShouldHaveText(fuelPage.getFuelPageApplication(), "Заправляйте топливо с кэшбэком");
             });
             step("В блоке отображается QR-код", () -> {
                 elementShouldBeVisible(fuelPage.getFuelPageApplicationQrCode());
